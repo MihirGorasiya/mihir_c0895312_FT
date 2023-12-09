@@ -1,7 +1,17 @@
-public class Number extends Binary{
+public class Number extends ArithmeticExp {
     private int value;
 
-    public Number(int type, int value, ArithmeticExp left, ArithmeticExp right) {
-        super(type, value, left, right);
+    public Number(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public int evaluate() {
+        return value;
+    }
+
+    @Override
+    public String evaluateString() {
+        return Integer.toString(value);
     }
 }
